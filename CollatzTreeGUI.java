@@ -1,11 +1,8 @@
 /*
-* CS 3354
-* Assignment 2
+* CollatzTreeGUI
 * Gabriel Carpio
-*
-* The following Program follows the guidelines given in the Instructions hand out
-* except for the sorted list using the Comparator. All other guidelines are met.
-*
+* The following program performs a Collatz sequence in a certain direction
+* based off inputs recieved from the user.
 * To compile - "javac CollatzTreeGUI.java
 * To Run     - "java CollatzTreeGUI"
 */
@@ -21,7 +18,7 @@ public class CollatzTreeGUI
     public CollatzTreeGUI()  throws IOException
     {
         JFrame frame = new JFrame("Collatz Tree GUI");
-        
+
         JPanel JP1 = new JPanel();
         JPanel JP2 = new JPanel();
         JPanel JP3 = new JPanel();
