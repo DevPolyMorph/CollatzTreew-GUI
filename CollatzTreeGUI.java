@@ -21,44 +21,44 @@ public class CollatzTreeGUI
     public CollatzTreeGUI()  throws IOException
     {
         JFrame frame = new JFrame("Collatz Tree GUI");
-        
+        /*this is a test*/
         JPanel JP1 = new JPanel();
         JPanel JP2 = new JPanel();
         JPanel JP3 = new JPanel();
         JPanel JP4 = new JPanel();
-        
+
         JTextField lfield = new JTextField("Enter L", 5);
         JTextField nfield = new JTextField("Enter N", 5);
-        
+
         JButton Run = new JButton("Run");
         JButton Exit = new JButton("Exit");
-        
+
         JRadioButton optionForward = new JRadioButton("Forward");
         JRadioButton optionBackward = new JRadioButton("Backward");
 
         ButtonGroup group = new ButtonGroup();
         group.add(optionForward);
         group.add(optionBackward);
-        
+
         frame.setLayout(new FlowLayout());
         frame.setSize(200,150);
-        
+
         JP1.add(optionForward);
         JP1.add(optionBackward);
-        
+
         JP2.add(lfield);
         JP2.add(nfield);
-        
+
         JP3.add(Run);
         JP4.add(Exit);
-        
+
         Exit.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
                 System.exit(0);
             }
-            
+
         });
 
         Run.addActionListener(new ActionListener()
@@ -67,7 +67,7 @@ public class CollatzTreeGUI
 			{
                 int n = Integer.parseInt(nfield.getText());
                 int l = Integer.parseInt(lfield.getText());
-                
+
                 if (optionForward.isSelected())
                 {
                     char chainDirection = 'f';
@@ -80,12 +80,12 @@ public class CollatzTreeGUI
                 }
             }
         });
-        
+
         frame.add(JP1);
         frame.add(JP2);
         frame.add(JP3);
         frame.add(JP4);
-        
+
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -94,7 +94,7 @@ public class CollatzTreeGUI
     {
         Queue<Integer> Q = new LinkedList<>();
         Q.add(n);
-        
+
         try {
             Writer writer = new FileWriter("output.csv");
             while(l > 0)
@@ -150,7 +150,7 @@ public class CollatzTreeGUI
             return null;
         }
     }
-    
+
     public static void main(String[] args) throws IOException
     {
         CollatzTreeGUI t = new CollatzTreeGUI();
