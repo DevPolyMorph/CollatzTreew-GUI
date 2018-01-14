@@ -21,7 +21,7 @@ public class CollatzTreeGUI
     public CollatzTreeGUI()  throws IOException
     {
         JFrame frame = new JFrame("Collatz Tree GUI");
-      
+        /*this is a test*/
         JPanel JP1 = new JPanel();
         JPanel JP2 = new JPanel();
         JPanel JP3 = new JPanel();
